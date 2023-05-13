@@ -11,11 +11,18 @@
 	<groupId>com.example</groupId>
 	<artifactId>Microservices</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Microservices</name>
+    <packaging>pom</packaging>
+    <name>Microservices</name>
+
 	<description>Microservices</description>
-	<properties>
+    <modules>
+        <module>twitter-to-kafka-service</module>
+    </modules>
+
+    <properties>
 		<java.version>20</java.version>
 	</properties>
+
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -26,6 +33,13 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.18.26</version>
+			<scope>provided</scope>
 		</dependency>
 	</dependencies>
 
