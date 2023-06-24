@@ -3,6 +3,7 @@ java-keywords:
     - test1
     - test2
 mock-config:
+  enable: true
   min-length: 10
   max-length: 30
   sleep-time: 1000

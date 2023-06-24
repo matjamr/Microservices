@@ -1,4 +1,4 @@
-package org.example.configuration;
+package org.example.config;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
@@ -8,10 +8,9 @@ import java.util.List;
 
 @Data
 @Configuration
-@ConfigurationProperties(prefix = "mock-config")
-public class MockConfig {
-    private Integer minLength;
-    private Integer maxLength;
-    private Double sleepTime;
+@ConfigurationProperties(prefix = "java-keywords")
+public class JavaKeywordsConfig {
+
     private List<String> keywords;
+
 }

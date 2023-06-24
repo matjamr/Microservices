@@ -1,21 +1,21 @@
 package org.example.twitter.runners;
 
+import org.example.config.JavaKeywordsConfig;
 import jakarta.annotation.PreDestroy;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.example.configuration.JavaKeywordsConfig;
 import org.example.twitter.TwitterStatusKafkaListener;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.stereotype.Component;
 import twitter4j.FilterQuery;
 import twitter4j.TwitterStream;
 import twitter4j.TwitterStreamFactory;
 
-import java.util.List;
-
 import static java.util.Objects.nonNull;
 
 @Slf4j
 @Component
+@ConditionalOnProperty(name = "mock-config.enable", havingValue = "false", matchIfMissing = true)
 @RequiredArgsConstructor
 public class TwitterKafkaStreamRunner implements StreamRunner {
 
