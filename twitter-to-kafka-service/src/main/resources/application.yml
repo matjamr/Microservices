@@ -2,3 +2,11 @@ java-keywords:
   keywords:
     - test1
     - test2
+mock-config:
+  min-length: 10
+  max-length: 30
+  sleep-time: 1000
+  keywords:
+    - test
+    - cos
+    - aaaa
